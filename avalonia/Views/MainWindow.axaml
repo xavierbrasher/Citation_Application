@@ -1,4 +1,4 @@
-<Window xmlns="https://github.com/avaloniaui"
+﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:GetStartedApp.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,19 +7,48 @@
         x:Class="GetStartedApp.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="GetStartedApp">
+		RequestedThemeVariant="Dark"
+		Background="#374259"
+        Title="Citation Application"
+		Foreground="#F2D8D8"
+		WindowStartupLocation="CenterScreen"
+		Height="700"
+		Width="1200"
+	>
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
+	
     </Design.DataContext>
+	
+	
 
-<StackPanel Margin="20">
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-    <TextBox Margin="0 5" TextWrapping="NoWrap" Watermark="Username"/>
-    <Button Click="Button_Click"> PRESS ME! </Button>  
-    <TextBlock x:Name="Olle" >Im alive and olle, currently mewing</TextBlock>
-    </StackPanel>
+    <StackPanel VerticalAlignment="Center">
+		
+    
+		<Grid >
+			
+		    <Grid.ColumnDefinitions>
+			    <ColumnDefinition Width="2*"/>
+			    <ColumnDefinition Width="3*"/>
+			    <ColumnDefinition Width="3*"/>
+			    <ColumnDefinition Width="2*"/>
+		    </Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="1*" />
+				<RowDefinition Height="1*" />
+				<RowDefinition Height="1*" />
+				<RowDefinition Height="1*" />
+			</Grid.RowDefinitions>    
+			
+	        <TextBlock FontFamily="lato" FontWeight="UltraBlack" FontSize="60" TextAlignment="Center" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2">Login</TextBlock>
+		    <TextBox BorderBrush="#F2D8D8" Foreground="#F2D8D8" x:Name="login_username" Margin="0 5" Grid.Row="1" Watermark="Username" Grid.Column="1" Grid.ColumnSpan="2" />
+		    <TextBox BorderBrush="#F2D8D8" Foreground="#F2D8D8" x:Name="login_password" Margin="0 5" Grid.Row="2" Watermark="Password" Grid.Column="1" Grid.ColumnSpan="2" PasswordChar="*" />
+			<Button CornerRadius="8" Foreground="#F2D8D8" Click="Button_Click" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="1" Margin="0 0 5 0" HorizontalContentAlignment="Center" >Sign Up</Button>
+			<Button IsDefault="True" CornerRadius="8" Foreground="#F2D8D8" Click="Button_Click" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="2" Margin="5 0 0 0" HorizontalContentAlignment="Center">Submit</Button>
+	    </Grid> 
+	</StackPanel>
 </Window>
  
