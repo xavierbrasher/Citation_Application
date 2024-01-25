@@ -15,6 +15,11 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
+<StackPanel Margin="20">
     <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <TextBox Margin="0 5" TextWrapping="NoWrap" Watermark="Username"/>
+    <Button Click="Button_Click"> PRESS ME! </Button>  
+    <TextBlock x:Name="Olle" >Im alive and olle, currently mewing</TextBlock>
+    </StackPanel>
 </Window>
+ 
