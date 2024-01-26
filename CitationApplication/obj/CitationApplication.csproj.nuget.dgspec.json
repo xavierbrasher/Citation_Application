@@ -61,6 +61,18 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.6, )"
+            },
+            "Google.Apis.Webfonts.v1": {
+              "target": "Package",
+              "version": "[1.66.0.3030, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [

@@ -11,5 +11,12 @@
   
     <Application.Styles>
         <FluentTheme />
+        <Style Selector="TextBlock.font">
+			<Setter Property="FontFamily" Value="Lato"/>
+		</Style>
     </Application.Styles>
+
+    <Application.Resources>
+		<FontFamily x:Key="defaultFont">avares://GoogleFonts/Assets/Fonts#Lato</FontFamily>
+	</Application.Resources>
 </Application>
