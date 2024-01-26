@@ -25,6 +25,5 @@
 	
 	
 
-   <TransitioningContentControl Content="{binding CurrentPage}"/> 
 </Window>
  
