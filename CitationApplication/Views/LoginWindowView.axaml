@@ -5,8 +5,7 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="CitationApplication.Views.LoginWindowView"
 		Foreground="#F2D8D8"
-		Height="700"
-            Width="1200">
+            >
 
 <TextBlock>dasssssssssssssssssssssssssssssssssssssssssssssssssssssss</TextBlock>
 
