@@ -1,0 +1,10 @@
+{
+  "background_color": "#ffffff",
+  "description": "CitationApplication",
+  "display": "standalone",
+  "name": "CitationApplication",
+  "short_name": "CitationApplication",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "scope": "/"
+}

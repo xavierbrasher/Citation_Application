@@ -1,0 +1,14 @@
+﻿<Page x:Class="CitationApplication.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:CitationApplication"
+      xmlns:um="using:Uno.Material"
+      Background="{ThemeResource BackgroundBrush}">
+  <StackPanel
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+    <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
+          Text="Hello World"
+          HorizontalAlignment="Center" />
+  </StackPanel>
+</Page>

@@ -1,0 +1,10 @@
+{
+	"profiles": {
+		"CitationApplication.Windows (Unpackaged)": {
+			"commandName": "Project"
+		},
+		"CitationApplication.Windows (Package)": {
+			"commandName": "MsixPackage"
+		}
+	}
+}
