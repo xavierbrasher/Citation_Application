@@ -1,9 +1,10 @@
-using System;
 using Microsoft.UI.Xaml;
+using System;
 using Uno.UI.Runtime.Skia.Linux.FrameBuffer;
 using Windows.UI.Core;
 
 namespace CitationApplication.Skia.Framebuffer;
+
 public class Program
 {
     public static void Main(string[] args)

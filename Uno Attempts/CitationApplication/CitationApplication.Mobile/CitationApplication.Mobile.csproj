@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Uno.Sdk">
   <PropertyGroup>
     <TargetFrameworks>$(DotNetVersion)-maccatalyst</TargetFrameworks>
     <TargetFrameworks Condition="'$(OverrideTargetFramework)'!=''">$(OverrideTargetFramework)</TargetFrameworks>
@@ -8,12 +8,10 @@
     <ApplicationTitle>CitationApplication</ApplicationTitle>
     <!-- App Identifier -->
     <ApplicationId>com.companyname.CitationApplication</ApplicationId>
-    <ApplicationIdGuid>397DB728-9FB9-453D-871A-86005A042010</ApplicationIdGuid>
+    <ApplicationIdGuid>717A8262-9D9C-48E2-B4B6-4C5976E3E511</ApplicationIdGuid>
     <!-- Versions -->
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
-
-    <AndroidManifest>Android\AndroidManifest.xml</AndroidManifest>
 
     <!-- Debugger workaround https://github.com/dotnet/maui-samples/blob/8aa6b8780b12e97b157514c3bdc54bb4a13001cd/HelloMacCatalyst/HelloMacCatalyst.csproj#L7 -->
     <!-- <MtouchExtraArgs Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">$(MtouchExtraArgs) -setenv:MONO_THREADS_SUSPEND=preemptive</MtouchExtraArgs> -->
@@ -32,7 +30,7 @@
     <PackageReference Include="Uno.WinUI.DevServer" Condition="'$(Configuration)'=='Debug'" />
   </ItemGroup>
   <Choose>
-    <When Condition="$(IsMacCatalyst)">
+    <When Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">
       <PropertyGroup>
         <!-- Configure the GC -->
         <MtouchExtraArgs>$(MtouchExtraArgs) --setenv=MONO_GC_PARAMS=soft-heap-limit=512m,nursery-size=64m,evacuation-threshold=66,major=marksweep,concurrent-sweep</MtouchExtraArgs>
@@ -40,7 +38,6 @@
         <MtouchExtraArgs>$(MtouchExtraArgs) --registrar:static</MtouchExtraArgs>
         <!-- Full globalization is required for Uno -->
         <InvariantGlobalization>false</InvariantGlobalization>
-        <RuntimeIdentifier Condition="'$(RuntimeIdentifier)'==''">maccatalyst-x64</RuntimeIdentifier>
       </PropertyGroup>
       <PropertyGroup Condition="'$(Configuration)'=='Release'">
         <!-- https://github.com/xamarin/xamarin-macios/issues/14812 -->

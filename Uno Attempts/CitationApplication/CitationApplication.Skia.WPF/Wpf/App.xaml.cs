@@ -1,7 +1,8 @@
-using Uno.UI.Runtime.Skia.Wpf;
 using WpfApp = System.Windows.Application;
+using Uno.UI.Runtime.Skia.Wpf;
 
 namespace CitationApplication.WPF;
+
 public partial class App : WpfApp
 {
     public App()

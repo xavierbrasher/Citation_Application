@@ -7,8 +7,9 @@
   <StackPanel
         HorizontalAlignment="Center"
         VerticalAlignment="Center">
-    <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
-          Text="Hello World"
+    <TextBlock
+          Text="Welcome to Citation Application!"
           HorizontalAlignment="Center" />
+    <ToggleSwitch IsOn="{{Binding currentState}}" HorizontalAlignment="Center" />
   </StackPanel>
 </Page>

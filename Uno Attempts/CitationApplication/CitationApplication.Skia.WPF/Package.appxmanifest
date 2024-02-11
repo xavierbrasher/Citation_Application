@@ -8,7 +8,7 @@
 
   <Identity
     Name="CitationApplication"
-    Publisher="O=Xavier"
+    Publisher="O=CitationApplication"
     Version="1.0.0.0" />
 
   <Properties>
